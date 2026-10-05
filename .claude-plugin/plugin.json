@@ -1,0 +1,16 @@
+{
+  "name": "polyrepo",
+  "version": "0.1.0",
+  "description": "Work across a folder of independent git repos: repo map, multi-repo rules, configurable root and an opt-in parallel mode.",
+  "author": {
+    "name": "diego15ag"
+  },
+  "repository": "https://github.com/diego15ag/polyrepo",
+  "userConfig": {
+    "ws_root": {
+      "type": "directory",
+      "title": "Workspace root",
+      "description": "Optional. Folder whose direct children are your git repos. If unset, any non-repo folder with 2+ child repos is treated as a workspace."
+    }
+  }
+}

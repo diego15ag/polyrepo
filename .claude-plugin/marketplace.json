@@ -1,0 +1,14 @@
+{
+  "name": "polyrepo",
+  "description": "Claude Code plugin for working across a folder of independent git repos.",
+  "owner": {
+    "name": "diego15ag"
+  },
+  "plugins": [
+    {
+      "name": "polyrepo",
+      "source": "./",
+      "description": "Work across a folder of independent git repos: repo map, multi-repo rules, configurable root and an opt-in parallel mode."
+    }
+  ]
+}
