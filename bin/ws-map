@@ -10,6 +10,8 @@ AGENTS_MAX_LINES=300
 
 canonical() { (cd "$1" 2>/dev/null && pwd -P); }
 
+# Configured paths may arrive with a literal, unexpanded "~"; expand it by hand.
+# shellcheck disable=SC2088  # matching the literal "~" text is the point here
 expand_tilde() {
   case "$1" in
     "~") printf '%s' "$HOME" ;;

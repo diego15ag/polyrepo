@@ -102,6 +102,7 @@ mkdir -p "$TMP/other"; g clone "$TMP/origin.git" "$TMP/other/r1"; g clone "$TMP/
 empty "$(run "$TMP/other")" "configured: another multi-repo dir is not a root"
 
 # --- configuration fallbacks ---------------------------------------------------
+# shellcheck disable=SC2088  # deliberately pass an unexpanded "~" like a configured value would
 out=$(HOME="$TMP" CLAUDE_PLUGIN_OPTION_WS_ROOT="~/ws" CLAUDE_PROJECT_DIR="$ROOT" "$WS_MAP" </dev/null)
 contains "$out" "— 4 repos" "config: leading ~ expanded"
 out=$(env -u CLAUDE_PLUGIN_OPTION_WS_ROOT WS_ROOT="$ROOT" CLAUDE_PROJECT_DIR="$ROOT" "$WS_MAP" </dev/null)
